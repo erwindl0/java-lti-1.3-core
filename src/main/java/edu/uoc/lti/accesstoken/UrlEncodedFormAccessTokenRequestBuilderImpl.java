@@ -21,7 +21,7 @@ public class UrlEncodedFormAccessTokenRequestBuilderImpl implements AccessTokenR
                 if (!method.getName().startsWith("get")) {
                   return null;
                 }                
-								final Object value = method.invoke(request, null);
+								final Object value = method.invoke(request);
 								String valueAsString = null;
 								if (method.getReturnType().getSimpleName().equals("String")) {
 									valueAsString = (String) value;
